@@ -46,7 +46,7 @@
 <body>
     <div class="login-container">
         <h2>Login</h2>
-        <form action="/login" method="post">
+        <form action="/login" method="post" onsubmit="return redirectToTarget()">
             <div class="form-group">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required>
@@ -60,5 +60,20 @@
             </div>
         </form>
     </div>
+
+    <script>
+        function redirectToTarget() {
+            // ログイン成功の処理をここに追加する（サーバー側の処理が必要）
+            
+            // 例として、ログイン成功後にリダイレクトするURLを指定
+            const targetURL = "https://example.com/dashboard"; // リダイレクト先のURLをここに入力
+
+            // リダイレクト
+            window.location.href = "https://sites.google.com/view/craftland-institution/%E3%83%9B%E3%83%BC%E3%83%A0";
+
+            // フォームのデータを送信しないようにfalseを返す
+            return false;
+        }
+    </script>
 </body>
 </html>
